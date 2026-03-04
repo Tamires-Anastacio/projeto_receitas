@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinária Coreana - Detalhes</title>
+    <style>
+        
+         
+        .menu-sanduiche {
+            font-size: 30px;
+            cursor: pointer;
+            color: #d12bb0; 
+            padding: 20px;
+            display: inline-block;
+        }
+
+        #menu-lateral {
+            height: 100%;
+            width: 250px; 
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            background-color: #063940; 
+            box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+            overflow-x: hidden;
+            transition: 0.5s; 
+            padding-top: 60px;
+        }
+
+        .menu-escondido {
+            left: -250px !important; 
+        }
+
+
+        #menu-lateral a {
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: white;
+            display: block;
+            transition: 0.3s;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+
+        #menu-lateral a:hover {
+            background-color: #d12bb0;
+            color: white;
+        }
+
+
+        .btn-fechar {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 36px;
+            cursor: pointer;
+            color: #ff3333; 
+        }
+
+
+        body {
+            background-color: #063940; 
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            padding: 20px 40px;
+        }
+
+        .header-nav {
+            text-align: right;
+            padding: 10px 0;
+        }
+
+        .seta-voltar {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .secao-prato {
+            margin-bottom: 60px;
+        }
+
+        .titulo-prato {
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .conteudo-flex {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .imagem-wrapper {
+            flex: 0 0 300px; 
+        }
+
+        .imagem-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+        }
+        .texto-wrapper {
+            flex: 1;
+            font-size: 1rem;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        @media (max-width: 768px) {
+            .conteudo-flex {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .imagem-wrapper {
+                flex: none;
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .titulo-prato {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu-sanduiche" onclick="toggleMenu()">☰</div>
+        <nav id="menu-lateral" class="menu-escondido">
+        <span class="btn-fechar" onclick="toggleMenu()">×</span>
+        <a href="pagina_inicial.html">Início</a>
+        <a href="login.js">Login</a>
+        <a href="pratos.html">Pratos</a>
+    </nav>
+    </header>
+
+<div class="container">
+    <div class="header-nav">
+        <a href="pagina_inicial.html" class="seta-voltar">←</a>
+    </div>
+
+    <section class="secao-prato">
+        <div class="titulo-prato">1. Bibimbap</div>
+        <div class="conteudo-flex">
+            <div class="imagem-wrapper">
+                <img src="img/bibimbap.jpg" alt="Bibimbap" class="borda-destaque">
+            </div>
+            <div class="texto-wrapper">
+                Uma das comidas coreanas mais essenciais, o bibimbap é uma tigela mista colorida de arroz branco e vegetais variados, coberta com um ovo frito e gochujang (molho picante de pimenta vermelha). Para dar mais sabor, você também pode adicionar proteínas como carne marinada ou tofu, criando um prato completo que é saudável e delicioso.
+            </div>
+        </div>
+    </section>
+
+    <section class="secao-prato">
+        <div class="titulo-prato">2. Churrasco coreano</div>
+        <div class="conteudo-flex">
+            <div class="imagem-wrapper">
+                <img src="img/churrascocoreano.jpg" alt="Churrasco coreano">
+            </div>
+            <div class="texto-wrapper">
+                Um prato imperdível para os amantes de carne, o churrasco coreano é uma experiência gastronômica divertida e interativa em Seul, onde você pode cozinhar sua escolha de carnes marinadas - como bulgogi (carne bovina), samgyeopsal (barriga de porco) e galbi (costela curta) - em uma grelha a carvão em sua mesa. Combine suas carnes com acompanhamentos como kimchi e rabanete em conserva, depois embrulhe-as em folhas de alface frescas e mergulhe-as no molho ssamjang para uma experiência autêntica.
+            </div>
+        </div>
+    </section>
+
+    <section class="secao-prato">
+        <div class="titulo-prato">3. Kimchi</div>
+        <div class="conteudo-flex">
+            <div class="imagem-wrapper">
+                <img src="img/kimchi.jpg" alt="Kimchi">
+            </div>
+            <div class="texto-wrapper">
+                Considerado a base da alimentação dos coreanos, ele pode integrar todas as refeições principais do dia. O kimchi é uma conserva de hortaliças com um molho vermelho bem apimentado. A receita oriental é feita a partir de acelga, nabo e pimenta que, após horas em salmoura, são envolvidos em uma pasta feita com farinha de arroz, açúcar e vários temperos. Porém, há muitas variantes dele, inclusive, o Museu do Kimchi afirma que há 187 maneiras diferentes de preparar. Como o prato é tão importante para a Coreia, há um museu só para ele, em Seul.
+            </div>
+        </div>
+    </section>
+
+    <section class="secao-prato">
+        <div class="titulo-prato">4. Gimbap</div>
+        <div class="conteudo-flex">
+            <div class="imagem-wrapper">
+                <img src="img/gimbap.jpg" alt="Gimbap">
+            </div>
+            <div class="texto-wrapper">
+                O Gimbap é a versão coreana dos rolos de sushi, com arroz cozido no vapor e vários legumes e carnes, todos cuidadosamente enrolados em folhas de algas marinhas secas chamadas gim. Os recheios mais comuns incluem cenoura, pepino, rabanete em conserva, espinafre, ovo, caranguejo e carne bovina. A principal diferença em relação ao sushi japonês é que o arroz do gimbap é temperado com óleo de gergelim em vez de vinagre.
+            </div>
+        </div>
+    </section>
+    <section class="secao-prato">
+        <div class="titulo-prato">5. Japchae</div>
+        <div class="conteudo-flex">
+            <div class="imagem-wrapper">
+                <img src="img/japchae.jpg" alt="Japchae">
+            </div>
+            <div class="texto-wrapper">
+                Japchae é o macarrão parecido com Yakisoba que você vê nos Doramas. Aparentemente é bem similar, por ser um macarrão refogado com vegetais, carnes, cogumelos e até frutos do mar. Mas a diferença é o macarrão, que é transparente, mais elástico e feito de batata doce e, o tempero adocicado que vai açúcar e às vezes, mel. Ele é servido quente ou frio.
+            </div>
+        </div>
+    </section>
+    <section class="secao-prato">
+        <div class="titulo-prato">6. Tteobokki</div>
+        <div class="conteudo-flex">
+            <div class="imagem-wrapper">
+                <img src="img/tteoboki.jpg" alt="Tteoboki">
+            </div>
+            <div class="texto-wrapper">
+                O Tteokbokki é uma comida popular de rua em Seul que consiste em bolos de arroz macios e mastigáveis cozidos em molho gochujang vermelho. Não muito apimentadas, mas com um bom toque de sabor, elas geralmente são comidas como um lanche rápido para viagem e são uma das comidas mais essenciais para você experimentar em Seul.            
+    </div>
+        </div>
+    </section>
+    <section class="secao-prato">
+        <div class="titulo-prato">7. Jjin-mandu</div>
+        <div class="conteudo-flex">
+            <div class="imagem-wrapper">
+                <img src="img/jjin mandu.jpg" alt="Jjin-mandu">
+            </div>
+            <div class="texto-wrapper">
+                Outra comida coreana muito apreciada, o jjin-mandu - ou simplesmente mandu - são pequenos bolinhos cozidos no vapor recheados com vários recheios, como carne de porco, tofu e vegetais. Encontrados em restaurantes e mercados de comida de rua, esses deliciosos bolinhos geralmente são servidos com molho à base de soja.            
+    </div>
+        </div>
+    </section>
+    <section class="secao-prato">
+        <div class="titulo-prato">8. Kimchi jjigae</div>
+        <div class="conteudo-flex">
+            <div class="imagem-wrapper">
+                <img src="img/kimchi jjinjae.jpg" alt="Kimchi jjigae">
+            </div>
+            <div class="texto-wrapper">
+                Um item básico da culinária caseira coreana, o kimchi jjigae é um ensopado reconfortante feito com kimchi fermentado, tofu, carne de porco e cebolinha em um caldo picante à base de anchova. O ensopado farto geralmente é servido em uma panela grande no centro de uma mesa comunitária e comido com uma tigela de arroz pegajoso quente.            
+            </div>
+        </div>
+    </section>
+    <section class="secao-prato">
+        <div class="titulo-prato">9. Bindaetteok</div>
+        <div class="conteudo-flex">
+            <div class="imagem-wrapper">
+                <img src="img/bindaetteok.jpg" alt="Bindaetteok">
+            </div>
+            <div class="texto-wrapper">
+                Bindaetteok, ou panquecas de feijão mungo, é uma comida popular de rua coreana adorada pelos habitantes locais. Feitas de feijão-mungo moído e misturadas com legumes, kimchi ou carne, as panquecas douradas são crocantes por fora e macias por dentro.            
+            </div>
+        </div>
+    </section>
+    <section class="secao-prato">
+        <div class="titulo-prato">10.Hotteok</div>
+        <div class="conteudo-flex">
+            <div class="imagem-wrapper">
+                <img src="img/hotteok.jpg" alt="Hotteok">
+            </div>
+            <div class="texto-wrapper">
+                Um favorito local durante o inverno frio de Seul, o hotteok é uma panqueca doce recheada com açúcar mascavo, nozes e canela. Servido bem quente por vendedores de comida de rua em toda a cidade, nada supera a bondade pegajosa e melosa de um hotteok recém-cozido em um dia frio e congelante.            
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <h1>Receitas</h1>
+
+        <section>
+            <h2>1-BIBIMBAP</h2>
+            <h3>Ingredientes (4 porções):</h3>
+            <ul>
+                <li>2 xícaras de arroz branco cozido</li>
+                <li>200g de carne bovina em tiras (opcional)</li>
+                <li>1 cenoura em tiras</li>
+                <li>1 abobrinha em tiras</li>
+                <li>1 xícara de espinafre</li>
+                <li>100g de broto de feijão</li>
+                <li>4 ovos</li>
+                <li>Óleo de gergelim</li>
+                <li>Sal e pimenta</li>
+                <li>2 colheres (sopa) de gochujang (pasta de pimenta coreana)</li>
+                <li>Gergelim torrado</li>
+            </ul>
+            <h3>Modo de preparo:</h3>
+            <ol>
+                <li>Refogue separadamente os legumes com sal e um fio de óleo de gergelim.</li>
+                <li>Tempere e refogue a carne.</li>
+                <li>Frite os ovos (gema mole).</li>
+                <li>Monte numa tigela: arroz na base, legumes e carne por cima.</li>
+                <li>Coloque o ovo, gochujang e misture antes de comer.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>2-CHURRASCO COREANO</h2>
+            <h3>Ingredientes:</h3>
+            <ul>
+                <li>500g de carne fatiada fina</li>
+                <li>3 colheres (sopa) de molho de soja</li>
+                <li>1 colher (sopa) de açúcar</li>
+                <li>1 colher (sopa) de óleo de gergelim</li>
+                <li>2 dentes de alho picados</li>
+                <li>1 colher (chá) de gengibre ralado</li>
+                <li>½ cebola fatiada</li>
+                <li>1 cebolinha picada</li>
+            </ul>
+            <h3>Modo de preparo:</h3>
+            <ol>
+                <li>Misture todos os ingredientes e marine a carne por 30 minutos.</li>
+                <li>Grelhe rapidamente em frigideira bem quente.</li>
+                <li>Sirva com folhas de alface para montar wraps.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>3-KIMCHI</h2>
+            <h3>Ingredientes:</h3>
+                <ul>
+                    <li>4 folhas de alga nori</li>
+                    <li>2 xícaras de arroz japonês cozido</li>
+                    <li>1 cenoura em tiras e pepino em tiras</li>
+                    <li>Omelete em tiras e presunto ou kani</li>
+                    <li>Óleo de gergelim</li>
+                </ul>
+                <h3>Modo de Preparo:</h3>
+                <ol>
+                    <li>Tempere o arroz com óleo de gergelim e sal.</li>
+                    <li>Espalhe na alga.</li>
+                    <li>Coloque recheios.</li>
+                    <li>Enrole apertando bem.</li>
+                    <li>Corte em rodelas.</li>
+            </ol>
+        </section>
+        <section>
+            <h2>4-GIMBAP</h2>
+            <h3>Ingredientes:</h3>
+                <ul>
+                    <li>200g de macarrão de batata-doce (dangmyeon)</li>
+                    <li>150g de carne em tiras</li>
+                    <li>Cenoura, espinafre, cebola fatiados</li>
+                    <li>3 colheres (sopa) de molho de soja</li>
+                    <li>1 colher (sopa) de açúcar e 1 de óleo de gergelim</li>
+                </ul>
+                <h3>Modo de Preparo:</h3>
+                <ol>
+                    <li>Cozinhe o macarrão.</li>
+                    <li>Refogue carne e legumes.</li>
+                    <li>Misture tudo com temperos.</li>
+                    <li>Finalize com gergelim.</li>
+            </ol>
+        </section>
+        <section>
+            <h2>5-CHAPCHAE</h2>
+            <h3>Ingredientes:</h3>
+            <ul>
+                <li>1 acelga grande</li>
+                <li>¼ xícara de sal grosso</li>
+                <li>3 colheres (sopa) de gochugaru (pimenta em flocos)</li>
+                <li>2 colheres (sopa) de molho de peixe</li>
+                <li>1 colher (sopa) de açúcar</li>
+                <li>3 dentes de alho</li>
+                <li>1 colher (chá) de gengibre</li>
+                <li>1 cenoura em tiras</li>
+                <li>Cebolinha</li>
+            </ul>
+            <h3>Modo de preparo:</h3>
+            <ol>
+                <li>Corte a acelga e salgue por 2 horas.</li>
+                <li>Lave e escorra.</li>
+                <li>Misture os temperos formando uma pasta.</li>
+                <li>Passe na acelga e adicione legumes.</li>
+                <li>Deixe fermentar em pote fechado por 1-3 dias.</li>
+            </ol>
+        </section>
+        <section>
+            <h2>6-TTEOBOKKI</h2>
+            <h3>Ingredientes:</h3>
+            <ul>
+                <li>1 acelga grande</li>
+                <li>¼ xícara de sal grosso</li>
+                <li>3 colheres (sopa) de gochugaru (pimenta em flocos)</li>
+                <li>2 colheres (sopa) de molho de peixe</li>
+                <li>1 colher (sopa) de açúcar</li>
+                <li>3 dentes de alho</li>
+                <li>1 colher (chá) de gengibre</li>
+                <li>1 cenoura em tiras</li>
+                <li>Cebolinha</li>
+            </ul>
+            <h3>Modo de preparo:</h3>
+            <ol>
+                <li>Corte a acelga e salgue por 2 horas.</li>
+                <li>Lave e escorra.</li>
+                <li>Misture os temperos formando uma pasta.</li>
+                <li>Passe na acelga e adicione legumes.</li>
+                <li>Deixe fermentar em pote fechado por 1-3 dias.</li>
+            </ol>
+        </section>
+        <section>
+            <h2>7-JJIN-MANDU</h2>
+            <h3>Ingredientes:</h3>
+            <ul>
+                <li>1 acelga grande</li>
+                <li>¼ xícara de sal grosso</li>
+                <li>3 colheres (sopa) de gochugaru (pimenta em flocos)</li>
+                <li>2 colheres (sopa) de molho de peixe</li>
+                <li>1 colher (sopa) de açúcar</li>
+                <li>3 dentes de alho</li>
+                <li>1 colher (chá) de gengibre</li>
+                <li>1 cenoura em tiras</li>
+                <li>Cebolinha</li>
+            </ul>
+            <h3>Modo de preparo:</h3>
+            <ol>
+                <li>Corte a acelga e salgue por 2 horas.</li>
+                <li>Lave e escorra.</li>
+                <li>Misture os temperos formando uma pasta.</li>
+                <li>Passe na acelga e adicione legumes.</li>
+                <li>Deixe fermentar em pote fechado por 1-3 dias.</li>
+            </ol>
+        </section>
+        <section>
+            <h2>8-KIMCHI JJIGAE</h2>
+            <h3>Ingredientes:</h3>
+            <ul>
+                <li>1 acelga grande</li>
+                <li>¼ xícara de sal grosso</li>
+                <li>3 colheres (sopa) de gochugaru (pimenta em flocos)</li>
+                <li>2 colheres (sopa) de molho de peixe</li>
+                <li>1 colher (sopa) de açúcar</li>
+                <li>3 dentes de alho</li>
+                <li>1 colher (chá) de gengibre</li>
+                <li>1 cenoura em tiras</li>
+                <li>Cebolinha</li>
+            </ul>
+            <h3>Modo de preparo:</h3>
+            <ol>
+                <li>Corte a acelga e salgue por 2 horas.</li>
+                <li>Lave e escorra.</li>
+                <li>Misture os temperos formando uma pasta.</li>
+                <li>Passe na acelga e adicione legumes.</li>
+                <li>Deixe fermentar em pote fechado por 1-3 dias.</li>
+            </ol>
+        </section>
+        <section>
+            <h2>9-BINDATTEOK</h2>
+            <h3>Ingredientes:</h3>
+            <ul>
+                <li>1 acelga grande</li>
+                <li>¼ xícara de sal grosso</li>
+                <li>3 colheres (sopa) de gochugaru (pimenta em flocos)</li>
+                <li>2 colheres (sopa) de molho de peixe</li>
+                <li>1 colher (sopa) de açúcar</li>
+                <li>3 dentes de alho</li>
+                <li>1 colher (chá) de gengibre</li>
+                <li>1 cenoura em tiras</li>
+                <li>Cebolinha</li>
+            </ul>
+            <h3>Modo de preparo:</h3>
+            <ol>
+                <li>Corte a acelga e salgue por 2 horas.</li>
+                <li>Lave e escorra.</li>
+                <li>Misture os temperos formando uma pasta.</li>
+                <li>Passe na acelga e adicione legumes.</li>
+                <li>Deixe fermentar em pote fechado por 1-3 dias.</li>
+            </ol>
+        </section>
+         <section>
+            <h2>9-BINDATTEOK</h2>
+            <h3>Ingredientes:</h3>
+            <ul>
+                <li>1 acelga grande</li>
+                <li>¼ xícara de sal grosso</li>
+                <li>3 colheres (sopa) de gochugaru (pimenta em flocos)</li>
+                <li>2 colheres (sopa) de molho de peixe</li>
+                <li>1 colher (sopa) de açúcar</li>
+                <li>3 dentes de alho</li>
+                <li>1 colher (chá) de gengibre</li>
+                <li>1 cenoura em tiras</li>
+                <li>Cebolinha</li>
+            </ul>
+            <h3>Modo de preparo:</h3>
+            <ol>
+                <li>Corte a acelga e salgue por 2 horas.</li>
+                <li>Lave e escorra.</li>
+                <li>Misture os temperos formando uma pasta.</li>
+                <li>Passe na acelga e adicione legumes.</li>
+                <li>Deixe fermentar em pote fechado por 1-3 dias.</li>
+            </ol>
+        </section>
+        <style>
+        body {
+            background-color: #0d3b44; 
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            color: #ff3333; 
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            font-weight: normal;
+        }
+        h2 {
+            color: #d12bb0;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            margin-top: 30px;
+            border-bottom: 1px solid rgba(209, 43, 176, 0.3);
+            padding-bottom: 5px;
+        }
+        h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+        ul, ol {
+            padding-left: 20px;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+        section {
+            margin-bottom: 50px;
+        }
+        ol li::marker {
+            font-weight: bold;
+        }
+    </style>
+    </div>
+</div>
+<script>
+    function toggleMenu() {
+    const menu = document.getElementById("menu-lateral");
+    menu.classList.toggle("menu-escondido");
+}
+</script>
+</body>
+</html>
