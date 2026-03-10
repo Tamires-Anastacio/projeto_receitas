@@ -1,16 +1,17 @@
 <?php
 $email_valido = "usuario@email.com";
 $senha_valida = "123456";
+$mensagem_erro = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
+    $email = $_POST['email'] ?? '';
+    $senha = $_POST['senha'] ?? '';
 
     if ($email === $email_valido && $senha === $senha_valida) {
-        header("Location: receitas.php");
+        header("Location: pagina_inicial.html");
         exit();
     } else {
-        echo "<script>alert('Email ou senha incorretos!'); window.location.href='index.php';</script>";
+        $mensagem_erro = "E-mail ou senha incorretos!";
     }
 }
 ?>

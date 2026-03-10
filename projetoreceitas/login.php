@@ -143,31 +143,15 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="menu-sanduiche" onclick="toggleMenu()">☰</div>
-        <nav id="menu-lateral" class="menu-escondido">
-        <span class="btn-fechar" onclick="toggleMenu()">×</span>
-        <a href="pagina_inicial.html">Início</a>
-        <a href="login.js">Login</a>
-        <a href="pratos.html">Pratos e receitas</a>
-    </nav>
-    </header>
-
-    <a href="pagina_inicial.html" class="seta-voltar">⟶</a>
-
     <div class="login-container">
         <h1>LOGIN</h1>
         
-        <form id="loginForm" action="processa_login.php" method="POST">
+        <form id="loginForm" action="pagina_inicial.html" method="POST">
             <input type="email" name="email" id="email" placeholder="Email" required>
             <input type="password" name="senha" id="senha" placeholder="Senha" required>
             <button type="submit">ENTRAR</button>
         </form>
     </div>
-    <div class="social-login">
-            <a href="https://www.facebook.com/login" class="social-icon"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
-        </div>
 
     <script>
         document.getElementById('loginForm').onsubmit = function(event) {
