@@ -138,8 +138,6 @@
             color: white;
             transform: scale(1.1);
         }
-        .fa-facebook:hover { color: #1877F2; } 
-        .fa-google:hover { color: #DB4437; } 
     </style>
 </head>
 <body>
@@ -152,7 +150,7 @@
             <button type="submit">ENTRAR</button>
         </form>
     </div>
-
+        
     <script>
         document.getElementById('loginForm').onsubmit = function(event) {
             const email = document.getElementById('email').value;
